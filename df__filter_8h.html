@@ -101,17 +101,19 @@ $(document).ready(function(){initNavTree('df__filter_8h.html',''); initResizable
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;TFile.h&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for df_filter.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="df__filter_8h__incl.png" border="0" usemap="#a_2home_2sarinaleggy_2Scrivania_2cmepda__exam_2exam_2include_2df__filter_8h" alt=""/></div>
 <map name="a_2home_2sarinaleggy_2Scrivania_2cmepda__exam_2exam_2include_2df__filter_8h" id="a_2home_2sarinaleggy_2Scrivania_2cmepda__exam_2exam_2include_2df__filter_8h">
-<area shape="rect" title=" " alt="" coords="211,5,425,61"/>
+<area shape="rect" title=" " alt="" coords="253,5,468,61"/>
 <area shape="rect" title=" " alt="" coords="5,109,177,136"/>
 <area shape="rect" title=" " alt="" coords="201,109,264,136"/>
 <area shape="rect" title=" " alt="" coords="289,109,347,136"/>
 <area shape="rect" title=" " alt="" coords="372,109,437,136"/>
 <area shape="rect" title=" " alt="" coords="462,109,542,136"/>
+<area shape="rect" title=" " alt="" coords="566,109,657,136"/>
 </map>
 </div>
 </div>
@@ -119,13 +121,13 @@ Include dependency graph for df_filter.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aefe1e328cb35cc108f2bd7695225afc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="df__filter_8h.html#aefe1e328cb35cc108f2bd7695225afc5">filter_df</a> (std::string filepath_MC, std::string filepath_datas, std::string filepath_MC_fil, std::string filepath_datas_fil)</td></tr>
-<tr class="memdesc:aefe1e328cb35cc108f2bd7695225afc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function creates filtered dataframes of MC datas and Run datas with a snapshot function with columns "Muon_pt" , "Muon_mass" , "Muon_phi" , "Muon_eta". The filter is based on the following columns: "Muon_pt" , "Muon_eta", "nMuon", "Muon_dxy", "Muon_charge", "Muon_pfRelIso03_chg".  <a href="df__filter_8h.html#aefe1e328cb35cc108f2bd7695225afc5">More...</a><br /></td></tr>
-<tr class="separator:aefe1e328cb35cc108f2bd7695225afc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ac815988560cb38c72f364110fb3cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="df__filter_8h.html#a65ac815988560cb38c72f364110fb3cf">filter_df</a> (std::string filepath_MC, std::string filepath_datas, std::string filename_MC_fil, std::string filename_datas_fil)</td></tr>
+<tr class="memdesc:a65ac815988560cb38c72f364110fb3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function creates filtered dataframes of MC datas and Run datas with a snapshot function with columns "Muon_pt" , "Muon_mass" , "Muon_phi" , "Muon_eta". This will be saved in the folder "datas". If it doesn't exist, the program will create it. The filter is based on the following columns: "Muon_pt" , "Muon_eta", "nMuon", "Muon_dxy", "Muon_charge", "Muon_pfRelIso03_chg".  <a href="df__filter_8h.html#a65ac815988560cb38c72f364110fb3cf">More...</a><br /></td></tr>
+<tr class="separator:a65ac815988560cb38c72f364110fb3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aefe1e328cb35cc108f2bd7695225afc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefe1e328cb35cc108f2bd7695225afc5">&#9670;&nbsp;</a></span>filter_df()</h2>
+<a id="a65ac815988560cb38c72f364110fb3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ac815988560cb38c72f364110fb3cf">&#9670;&nbsp;</a></span>filter_df()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,13 +148,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>filepath_MC_fil</em>, </td>
+          <td class="paramname"><em>filename_MC_fil</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>filepath_datas_fil</em>&#160;</td>
+          <td class="paramname"><em>filename_datas_fil</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -162,13 +164,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function creates filtered dataframes of MC datas and Run datas with a snapshot function with columns "Muon_pt" , "Muon_mass" , "Muon_phi" , "Muon_eta". The filter is based on the following columns: "Muon_pt" , "Muon_eta", "nMuon", "Muon_dxy", "Muon_charge", "Muon_pfRelIso03_chg". </p>
+<p>This function creates filtered dataframes of MC datas and Run datas with a snapshot function with columns "Muon_pt" , "Muon_mass" , "Muon_phi" , "Muon_eta". This will be saved in the folder "datas". If it doesn't exist, the program will create it. The filter is based on the following columns: "Muon_pt" , "Muon_eta", "nMuon", "Muon_dxy", "Muon_charge", "Muon_pfRelIso03_chg". </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filepath_MC</td><td>dataframe of the MC datas </td></tr>
     <tr><td class="paramname">filepath_datas</td><td>dataframe of the Run datas </td></tr>
-    <tr><td class="paramname">filepath_MC_fil</td><td>file path of the dataframe of the MC datas filtered </td></tr>
-    <tr><td class="paramname">filepath_datas_fil</td><td>dataframe of the dataframe of the Run datas filtered</td></tr>
+    <tr><td class="paramname">filename_MC_fil</td><td>file name of the dataframe of the MC datas filtered </td></tr>
+    <tr><td class="paramname">filename_datas_fil</td><td>file name of the dataframe of the Run datas filtered</td></tr>
   </table>
   </dd>
 </dl>
