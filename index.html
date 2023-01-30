@@ -126,22 +126,25 @@ An example of usage</h1>
 <div class="line">$ root:<span class="comment">//eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/MonteCarlo11_Summer11LegDR_DYJetsToLL_M-50_7TeV-madgraph-pythia6-tauola_merged.root</span></div>
 <div class="line">$ Insert your Run path:</div>
 <div class="line">$ root:<span class="comment">//eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2012C_DoubleMuParked_merged.root</span></div>
-</div><!-- fragment --><p>Then the program will ask you where do you want to put your filtered dataframes.</p>
-<p>This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert where you want to save your filtered MC path:</div>
-<div class="line">$ datas/Events_MC.root</div>
-<div class="line">$ Insert where you want to save your filtered Run path:</div>
-<div class="line">$ datas/Events_datas.root</div>
-</div><!-- fragment --><p>If you type 'n', you will have to insert the path of your filtered file. It only accepts root files, with the right columns. This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC path:</div>
-<div class="line">$ datas/Events_MC.root</div>
-<div class="line">$ Insert your filtered Run path:</div>
-<div class="line">$ datas/Events_datas.root</div>
-</div><!-- fragment --><p>You will be able to choose the Analysis you want:</p><ul>
+</div><!-- fragment --><p> The program will accept only files that exist and that have the right columns, if there aren't the program will stop. Then the program will ask you the name of your filtered dataframes files.</p>
+<p>This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert where you want to save your filtered MC name (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_MC.root</div>
+<div class="line">$ Insert where you want to save your filtered Run name (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_datas.root</div>
+</div><!-- fragment --><p> You'll find your files on the directory "datas".</p>
+<p>If you type 'n', you will have to insert the path of your filtered file. It only accepts root files, with the right columns. This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC path (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_MC.root</div>
+<div class="line">$ Insert your filtered Run path (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_datas.root</div>
+</div><!-- fragment --><p> Be careful, the program will only look for files that are in the "datas" directory, if there aren't the program will stop.</p>
+<p>You will be able to choose the Analysis you want:</p><ul>
 <li>1: the measurement of the angle of the negative muon in the Collins–Soper frame of the dimuon system;</li>
 <li>2: the measurement of the Z resonance;</li>
 <li>3: the measurement of the forward-backward asymmetry;</li>
-<li><p class="startli">0: quit.</p>
-<p class="startli">The default applied filters are on the following columns of the dataframes:</p>
-</li>
+<li>0: quit.</li>
+</ul>
+<p>After the analysis the program will stop. If your analysis well ended, you can find your plots on the directory "images".</p>
+<p>The default applied filters are on the following columns of the dataframes:</p><ul>
 <li>nMuon;</li>
 <li>Muon_charge;</li>
 <li>Muon_eta;</li>
@@ -149,7 +152,7 @@ An example of usage</h1>
 <li>Muon_dxy;</li>
 <li>Muon_pfRelIso03_chg.</li>
 </ul>
-<h1><a class="anchor" id="program_des"></a>
+<h1><a class="anchor" id="program"></a>
 Description of main (and functionality of libraries)</h1>
 <h2><a class="anchor" id="filter"></a>
 Filter function</h2>
@@ -219,18 +222,18 @@ Testing</h1>
 <p>If you type 'y', you have to insert your root path to the file for MC and Run, and also the path where you want to save your filtered dataframes.</p>
 <ul>
 <li>We used root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/MonteCarlo11_Summer11LegDR_DYJetsToLL_M-50_7TeV-madgraph-pythia6-tauola_merged.root for the MC simulation datas.</li>
-<li>We used root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2012C_DoubleMuParked_merged.root for the Run datas.</li>
+<li>We used root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2012C_DoubleMuParked_merged.root for the Run datas. The program will accept only files that exist and that have the right columns, if there aren't the program will stop. Then the program will ask you the name of filtered dataframes files.</li>
 </ul>
-<p>Then the program will ask you where do you want to put your filtered dataframes.</p>
-<p>This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert where you want to save your filtered MC path:</div>
-<div class="line">$ datas/Events_MC.root</div>
-<div class="line">$ Insert where you want to save your filtered Run path:</div>
-<div class="line">$ datas/Events_datas.root</div>
-</div><!-- fragment --><p>If you type 'n', you will have to insert the path of your filtered file. This is simply done by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC path:</div>
-<div class="line">$ datas/Events_MC.root</div>
-<div class="line">$ Insert your filtered Run path:</div>
-<div class="line">$ datas/Events_datas.root</div>
-</div><!-- fragment --><p>You will be able to choose the test you want to do:</p><ul>
+<p>This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC name (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_MC.root</div>
+<div class="line">$ Insert your filtered Run name (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_datas.root</div>
+</div><!-- fragment --><p> This files will be saved in "datas" directory.</p>
+<p>If you type 'n', you will have to insert the path of your filtered file. This is simply done by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC name (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_MC.root</div>
+<div class="line">$ Insert your filtered Run name (Be careful, put file extension .root too):</div>
+<div class="line">$ Events_datas.root</div>
+</div><!-- fragment --><p> The program will automatically look for your files in the "datas" directory, if there aren't the program will stop. For semplicity you'll have to write your datas and MC names also if you want to do test1 (filter function test). You will be able to choose the test you want to do:</p><ul>
 <li>1: test on filter function;</li>
 <li>2: test on costheta value;</li>
 <li>3: test on energy value;</li>
@@ -239,16 +242,16 @@ Testing</h1>
 </ul>
 <h2><a class="anchor" id="test1"></a>
 Test on filter function</h2>
-<p>Test on filter function handles the correct error given by the filter function. In this test we call <code><a class="el" href="df__filter_8h.html#aefe1e328cb35cc108f2bd7695225afc5" title="This function creates filtered dataframes of MC datas and Run datas with a snapshot function with col...">filter_df()</a></code>, with wrong path, empty dataframe, right dataframe, dataframe with few columns to see if the error given by the function corresponds to our previsions. It prints "Test passed!" everything was done correctly or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__filt_8cpp.html" title="Testing if the filter function works.">test_filt.cpp</a></code>.</p>
+<p>Test on filter function handles the correct error given by the filter function. In this test we call <code><a class="el" href="df__filter_8h.html#a65ac815988560cb38c72f364110fb3cf" title="This function creates filtered dataframes of MC datas and Run datas with a snapshot function with col...">filter_df()</a></code>, with wrong path, empty dataframe, right dataframe, dataframe with few columns to see if the error given by the function corresponds to our previsions. It prints "Test passed!" everything was done correctly or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__filt_8cpp.html" title="Testing if the filter function works.">test_filt.cpp</a></code>.</p>
 <h2><a class="anchor" id="test2"></a>
 Test on costheta value</h2>
-<p>Test on costheta function handles if \(|cos(\theta^*)|\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is &lt;1. It creates all quantities in <code>all_quantities()</code> and we check how many rows left with \(|cos(\theta^*)|&gt;1\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__cos_8cpp.html" title="Testing if the |cos(theta*)|&lt;1.">test_cos.cpp</a></code>.</p>
+<p>Test on costheta function handles if \(|cos(\theta^*)|\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is &lt;1. It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|cos(\theta^*)|&gt;1\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__cos_8cpp.html" title="Testing if the |cos(theta*)|&lt;1.">test_cos.cpp</a></code>.</p>
 <h2><a class="anchor" id="test2"></a>
 Test on costheta value</h2>
-<p>Test on energy values function handles if \(E_1+E_2-E_{tot}\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_{tot}\). It creates all quantities in <code>all_quantities()</code> and we check how many rows left with \(|E_1+E_2-E_{tot}|&gt;0.01%*E_{tot}\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy_8cpp.html" title="Testing if the sum of E1 and E2 is almost equal to Etot.">test_energy.cpp</a></code>.</p>
+<p>Test on energy values function handles if \(E_1+E_2-E_{tot}\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_{tot}\). It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|E_1+E_2-E_{tot}|&gt;0.01\)% \(E_{tot}\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy_8cpp.html" title="Testing if the sum of E1 and E2 is almost equal to Etot.">test_energy.cpp</a></code>.</p>
 <h2><a class="anchor" id="test3"></a>
 Test on energy value formulas</h2>
-<p>Test on energy values function handles if \(E_i^2=p_i^2+m^2\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_i\). It creates all quantities in <code>all_quantities()</code> and we check how many rows left with \(|E_i-(p_i^2+m^2)|&gt;0.01%*E_i\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy__formulas_8cpp.html" title="Testing if E_i^2=m^2+p_i^2.">test_energy_formulas.cpp</a></code>. </p>
+<p>Test on energy values function handles if \(E_i^2=p_i^2+m^2\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_i\). It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|E_i-(p_i^2+m^2)|&gt;0.01\)% \(E_i\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy__formulas_8cpp.html" title="Testing if E_i^2=m^2+p_i^2.">test_energy_formulas.cpp</a></code>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

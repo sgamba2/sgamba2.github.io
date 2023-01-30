@@ -29,7 +29,7 @@ var NAVTREE =
       [ "Introduction", "index.html#intro_sec", null ],
       [ "Requirements", "index.html#Requirements", null ],
       [ "An example of usage", "index.html#example_usage", null ],
-      [ "Description of main (and functionality of libraries)", "index.html#program_des", [
+      [ "Description of main (and functionality of libraries)", "index.html#program", [
         [ "Filter function", "index.html#filter", null ],
         [ "Dimuon mass Spectrum of Z", "index.html#spectrum", null ],
         [ "cos(theta*)", "index.html#costheta", null ],
