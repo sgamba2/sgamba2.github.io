@@ -1,10 +1,9 @@
 var testing_8py =
 [
-    [ "choice", "testing_8py.html#a8ecd6a1ec326d816262fc904f3413245", null ],
-    [ "fil", "testing_8py.html#a82ef2517965f341ef23335cc783dbc62", null ],
-    [ "filename_datas_fil", "testing_8py.html#ab4c983166e7a0246a401a97b238f707e", null ],
-    [ "filename_MC_fil", "testing_8py.html#a548220428ce6a715138125d7fa61c197", null ],
-    [ "filepath_datas", "testing_8py.html#abf0165e40096fac3fa89b2d5af9ad276", null ],
-    [ "filepath_MC", "testing_8py.html#a086a557397f0a26dc6e994aa295721ed", null ],
-    [ "testopt", "testing_8py.html#ac0b7ad1a9b9697bb5e5ba511022348ab", null ]
+    [ "process", "testing_8py.html#a54e16f4fa338034a0a32199e54cb61d3", null ],
+    [ "args", "testing_8py.html#a80124978ea8ffcb828922c92f72477a0", null ],
+    [ "help", "testing_8py.html#ac5f9957fbe12f4a926393cda5f8f5502", null ],
+    [ "parser", "testing_8py.html#a7f0d4de71725abe59ededf3cd4d5d822", null ],
+    [ "str", "testing_8py.html#a9916229a6dad55c1c2cb070a4091fe90", null ],
+    [ "type", "testing_8py.html#ab217838640ba1f67e5f24d4240179394", null ]
 ];
