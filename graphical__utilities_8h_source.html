@@ -115,13 +115,13 @@ $(document).ready(function(){initNavTree('graphical__utilities_8h_source.html','
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;TROOT.h&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;TLegend.h&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="graphical__utilities_8h.html#af49ad1827056366916483538e9583c48">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="graphical__utilities_8h.html#af49ad1827056366916483538e9583c48">save_histogram</a>(TCanvas *c, <span class="keywordtype">string</span> namehist, <span class="keywordtype">string</span> type){</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="graphical__utilities_8h.html#af49ad1827056366916483538e9583c48">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="graphical__utilities_8h.html#af49ad1827056366916483538e9583c48">save_histogram</a>(TCanvas *c, <span class="keywordtype">string</span> namehist, <span class="keywordtype">string</span> <a class="code" href="namespaceopenfiles.html#afec62190323f37ac6594dbfd6c6a8561">type</a>){</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   <span class="keyword">namespace </span>fs = std::filesystem;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="comment">// define path where to save plot</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   type = <span class="stringliteral">&quot;/&quot;</span> + type;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <span class="keywordtype">string</span> subpath = <span class="stringliteral">&quot;images&quot;</span> + type;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <a class="code" href="namespaceopenfiles.html#afec62190323f37ac6594dbfd6c6a8561">type</a> = <span class="stringliteral">&quot;/&quot;</span> + <a class="code" href="namespaceopenfiles.html#afec62190323f37ac6594dbfd6c6a8561">type</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <span class="keywordtype">string</span> subpath = <span class="stringliteral">&quot;images&quot;</span> + <a class="code" href="namespaceopenfiles.html#afec62190323f37ac6594dbfd6c6a8561">type</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keywordtype">string</span> filepath_pdf =  subpath + <span class="stringliteral">&quot;/&quot;</span>  + namehist + <span class="stringliteral">&quot;.pdf&quot;</span>; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keywordtype">string</span> filepath_png =  subpath + <span class="stringliteral">&quot;/&quot;</span>  + namehist + <span class="stringliteral">&quot;.png&quot;</span>; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   </div>
@@ -130,10 +130,10 @@ $(document).ready(function(){initNavTree('graphical__utilities_8h_source.html','
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">if</span> (!fs::is_directory(<span class="stringliteral">&quot;images&quot;</span>) || !fs::exists(<span class="stringliteral">&quot;images&quot;</span>)) </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;         <span class="keywordflow">throw</span>(<span class="stringliteral">&quot;images&quot;</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> *path) { </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; path &lt;&lt; <span class="stringliteral">&quot; does not exist.\n&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Creating folder...\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; path &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Creating folder...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      fs::create_directory(path); </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; path &lt;&lt; <span class="stringliteral">&quot; successfully created\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; path &lt;&lt; <span class="stringliteral">&quot; successfully created!&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="comment">//if the subfolder &quot;type&quot; doesn&#39;t exist, it will create it</span></div>
@@ -143,10 +143,10 @@ $(document).ready(function(){initNavTree('graphical__utilities_8h_source.html','
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">if</span> (!fs::is_directory(subpath.c_str()) || !fs::exists(subpath.c_str())) </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;         <span class="keywordflow">throw</span>(subpath.c_str());</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   }<span class="keywordflow">catch</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> *newpath){</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; newpath &lt;&lt; <span class="stringliteral">&quot; does not exist.\n&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Creating folder...\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; newpath &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Creating folder...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      fs::create_directory(newpath);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; newpath &lt;&lt; <span class="stringliteral">&quot; successfully created\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;The folder &quot;</span> &lt;&lt; newpath &lt;&lt; <span class="stringliteral">&quot; successfully created&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      c-&gt;SaveAs(filepath_pdf.c_str());</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      c-&gt;SaveAs(filepath_png.c_str());</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   }</div>
@@ -178,8 +178,8 @@ $(document).ready(function(){initNavTree('graphical__utilities_8h_source.html','
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="comment">//creating a histogram </span></div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   <span class="keyword">auto</span> hist_MC = df_MC.Histo1D({<span class="stringliteral">&quot;hist_MC&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, nbins, -1, 1}, <span class="stringliteral">&quot;costheta&quot;</span>);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;   <span class="keyword">auto</span> hist_datas = df_datas.Histo1D({<span class="stringliteral">&quot;hist_datas&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, nbins, -1, 1}, <span class="stringliteral">&quot;costheta&quot;</span>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   hist_datas-&gt;Scale(1/<span class="keywordtype">float</span>((df_datas.Count()).GetValue()));</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   hist_MC-&gt;Scale(1/<span class="keywordtype">float</span>((df_MC.Count()).GetValue()));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   hist_datas-&gt;Scale(1./<span class="keywordtype">float</span>((df_datas.Count()).GetValue()));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   hist_MC-&gt;Scale(1./<span class="keywordtype">float</span>((df_MC.Count()).GetValue()));</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   <span class="comment">//creating report</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   <span class="keyword">auto</span> report_MC = df_MC.Report();</div>
@@ -270,8 +270,8 @@ $(document).ready(function(){initNavTree('graphical__utilities_8h_source.html','
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;   <span class="comment">//creating a histogram</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;   <span class="keyword">auto</span> hist_MC = df_MC.Histo1D({<span class="stringliteral">&quot;hist_MC&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, nbins, 70, 110}, <span class="stringliteral">&quot;dimuon_mass&quot;</span>);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;   <span class="keyword">auto</span> hist_datas = df_datas.Histo1D({<span class="stringliteral">&quot;hist_datas&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, nbins, 70, 110}, <span class="stringliteral">&quot;dimuon_mass&quot;</span>);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;   hist_datas-&gt;Scale(1/<span class="keywordtype">float</span>((df_datas.Count()).GetValue()));</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;   hist_MC-&gt;Scale(1/<span class="keywordtype">float</span>((df_MC.Count()).GetValue()));</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;   hist_datas-&gt;Scale(1./<span class="keywordtype">float</span>((df_datas.Count()).GetValue()));</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;   hist_MC-&gt;Scale(1./<span class="keywordtype">float</span>((df_MC.Count()).GetValue()));</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;   <span class="comment">//creating report</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;   <span class="keyword">auto</span> report_MC = df_MC.Report();</div>
@@ -353,65 +353,153 @@ $(document).ready(function(){initNavTree('graphical__utilities_8h_source.html','
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="graphical__utilities_8h.html#ac52e7e5d10318312fb41cfea233501b6">  315</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="graphical__utilities_8h.html#ac52e7e5d10318312fb41cfea233501b6">afbhist</a>(ROOT::RDF::RInterface&lt;ROOT::Detail::RDF::RJittedFilter, void&gt; df_MC, <span class="keywordtype">string</span> filename, <span class="keywordtype">string</span> rapiditylim){</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="graphical__utilities_8h.html#a402ad752672030c62dd862061c67a8a0">  315</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="graphical__utilities_8h.html#a402ad752672030c62dd862061c67a8a0">afbhist</a>(ROOT::RDF::RInterface&lt;ROOT::Detail::RDF::RJittedFilter, void&gt; df_MC, ROOT::RDF::RInterface&lt;ROOT::Detail::RDF::RJittedFilter, void&gt; df_datas, <span class="keywordtype">int</span> filenumber, <span class="keywordtype">string</span> rapiditylim){</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;   <span class="comment">//creating two filtered datframes, one with costheta=&gt;0, one with costheta&lt;0</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;   <span class="keyword">auto</span> df_cm_MC=df_MC.Filter(<span class="stringliteral">&quot;costheta&lt;0&quot;</span>, <span class="stringliteral">&quot;backward&quot;</span>);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;   <span class="keyword">auto</span> df_cp_MC=df_MC.Filter(<span class="stringliteral">&quot;costheta&gt;=0&quot;</span>, <span class="stringliteral">&quot;forward&quot;</span>);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;   </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;   <span class="comment">//creating four histogram 2D of the dimuonmass and rapidity weighted with wn</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;   <span class="keyword">auto</span> histDf_MC = df_cp_MC.Histo2D({<span class="stringliteral">&quot;cp,Df&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 10, 60,120,10,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wd&quot;</span>);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;   <span class="keyword">auto</span> histNf_MC = df_cp_MC.Histo2D({<span class="stringliteral">&quot;cp,Nf&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 10, 60,120,10,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wn&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;   <span class="keyword">auto</span> histDb_MC = df_cm_MC.Histo2D({<span class="stringliteral">&quot;cm,Db&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 10, 60,120,10,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wd&quot;</span>);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;   <span class="keyword">auto</span> histNb_MC = df_cm_MC.Histo2D({<span class="stringliteral">&quot;cm,Nb&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 10, 60,120,10,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wn&quot;</span>);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;   <span class="comment">//operation on histogram</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;   <span class="keyword">auto</span> hist_MC=<a class="code" href="graphical__utilities_8h.html#a7681d891e25dbae1760d1f14e531aee9">operationhist</a>(histNf_MC, histDf_MC, histNb_MC, histDb_MC);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;   </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;   <span class="comment">//projection of the final histogram</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;   <span class="keyword">auto</span> h_MC= hist_MC-&gt;ProjectionX();</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;   <span class="comment">//graphical set</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;   h_MC-&gt;SetStats(0);;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;   h_MC-&gt;SetMarkerStyle(8);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;   h_MC-&gt;SetMarkerColor(1);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTitle(<span class="stringliteral">&quot;m_{#mu#mu}&quot;</span>);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTitle(<span class="stringliteral">&quot;Afb MC&quot;</span>);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;   h_MC-&gt;GetXaxis()-&gt;CenterTitle(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   h_MC-&gt;GetYaxis()-&gt;CenterTitle(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;   <span class="comment">//creating two filtered datframes, one with costheta=&gt;0, one with costheta&lt;0</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;   <span class="keyword">auto</span> df_cm_MC=df_MC.Filter(<span class="stringliteral">&quot;costheta&lt;0&quot;</span>, <span class="stringliteral">&quot;backward&quot;</span>);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;   <span class="keyword">auto</span> df_cp_MC=df_MC.Filter(<span class="stringliteral">&quot;costheta&gt;=0&quot;</span>, <span class="stringliteral">&quot;forward&quot;</span>);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;   <span class="keyword">auto</span> df_cm_datas=df_datas.Filter(<span class="stringliteral">&quot;costheta&lt;0&quot;</span>, <span class="stringliteral">&quot;backward&quot;</span>);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;   <span class="keyword">auto</span> df_cp_datas=df_datas.Filter(<span class="stringliteral">&quot;costheta&gt;=0&quot;</span>, <span class="stringliteral">&quot;forward&quot;</span>);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;   <span class="comment">//creating report</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;   <span class="keyword">auto</span> report_cm_MC = df_cm_MC.Report();</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;   report_cm_MC-&gt;Print();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;   <span class="keyword">auto</span> report_cm_datas = df_cm_datas.Report();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;   report_cm_datas-&gt;Print();</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;   <span class="keyword">auto</span> report_cp_MC = df_cp_MC.Report();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;   report_cp_MC-&gt;Print();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;   <span class="keyword">auto</span> report_cp_datas = df_cp_datas.Report();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;   report_cp_datas-&gt;Print();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;   <span class="comment">//creating four histogram 2D of the dimuonmass and rapidity weighted with wn</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;   <span class="keyword">auto</span> histDf_MC = df_cp_MC.Histo2D({<span class="stringliteral">&quot;cp,Df&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wd&quot;</span>);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;   <span class="keyword">auto</span> histNf_MC = df_cp_MC.Histo2D({<span class="stringliteral">&quot;cp,Nf&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wn&quot;</span>);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;   <span class="keyword">auto</span> histDb_MC = df_cm_MC.Histo2D({<span class="stringliteral">&quot;cm,Db&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wd&quot;</span>);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;   <span class="keyword">auto</span> histNb_MC = df_cm_MC.Histo2D({<span class="stringliteral">&quot;cm,Nb&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wn&quot;</span>);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;   <span class="keyword">auto</span> histDf_datas = df_cp_datas.Histo2D({<span class="stringliteral">&quot;cp,Df&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wd&quot;</span>);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;   <span class="keyword">auto</span> histNf_datas = df_cp_datas.Histo2D({<span class="stringliteral">&quot;cp,Nf&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wn&quot;</span>);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;   <span class="keyword">auto</span> histDb_datas = df_cm_datas.Histo2D({<span class="stringliteral">&quot;cm,Db&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wd&quot;</span>);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   <span class="keyword">auto</span> histNb_datas = df_cm_datas.Histo2D({<span class="stringliteral">&quot;cm,Nb&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5, 60,120,5,-2.4,2.4},<span class="stringliteral">&quot;dimuon_mass&quot;</span>,<span class="stringliteral">&quot;y&quot;</span>,<span class="stringliteral">&quot;wn&quot;</span>);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTitleSize(0.13);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetNdivisions(505);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetLabelFont(42);</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetLabelSize(0.11);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetLabelOffset(-0.055);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTitleOffset(0.34);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTickLength(0.05);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;   </div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetLabelSize(0.09);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTitleSize(0.11);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTitleOffset(0.66);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTickLength(0.05);</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   <span class="comment">//drawing the final histogram</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;   h_MC-&gt;DrawClone(<span class="stringliteral">&quot;PSAME&quot;</span>);</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;   <span class="comment">//label on the histogram</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;   TLatex label;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;   label.SetTextSize(0.1);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;   label.SetTextAlign(12);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;   label.SetNDC(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;   label.DrawLatex(0.3, 0.85, rapiditylim.c_str());</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;}</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GRAPHICAL_UTILITIES_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;   <span class="comment">//normalizing histograms</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;   histDf_MC-&gt;Scale(1./<span class="keywordtype">float</span>((df_cp_MC.Count()).GetValue()));</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;   histNf_MC-&gt;Scale(1./<span class="keywordtype">float</span>((df_cp_MC.Count()).GetValue()));</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;   histDb_MC-&gt;Scale(1./<span class="keywordtype">float</span>((df_cm_MC.Count()).GetValue()));</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;   histNb_MC-&gt;Scale(1./<span class="keywordtype">float</span>((df_cm_MC.Count()).GetValue()));</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;   histDf_datas-&gt;Scale(1./<span class="keywordtype">float</span>((df_cp_datas.Count()).GetValue()));</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;   histNf_datas-&gt;Scale(1./<span class="keywordtype">float</span>((df_cp_datas.Count()).GetValue()));</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;   histDb_datas-&gt;Scale(1./<span class="keywordtype">float</span>((df_cm_datas.Count()).GetValue()));</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   histNb_datas-&gt;Scale(1./<span class="keywordtype">float</span>((df_cm_datas.Count()).GetValue()));</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   <span class="comment">//operation on histogram</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   <span class="keyword">auto</span> hist_MC=<a class="code" href="graphical__utilities_8h.html#a7681d891e25dbae1760d1f14e531aee9">operationhist</a>(histNf_MC, histDf_MC, histNb_MC, histDb_MC);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;   <span class="keyword">auto</span> hist_datas=<a class="code" href="graphical__utilities_8h.html#a7681d891e25dbae1760d1f14e531aee9">operationhist</a>(histNf_datas, histDf_datas, histNb_datas, histDb_datas);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;   <span class="comment">//drawing two subpads</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;   <span class="keyword">auto</span> pad1 = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;pad1&quot;</span>,<span class="stringliteral">&quot;pad1&quot;</span>,0.06,0.33,1,1);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;   <span class="keyword">auto</span> pad2 = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;pad2&quot;</span>,<span class="stringliteral">&quot;pad2&quot;</span>,0.06,0.08,1,0.30);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;   pad1-&gt;SetBorderMode(0);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;   pad2-&gt;SetTopMargin(0.00001);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;   pad2-&gt;SetBorderMode(0);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;   pad2-&gt;SetLeftMargin(0.17);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;   pad1-&gt;SetLeftMargin(0.17);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   pad2-&gt;SetBottomMargin(0.2);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;   pad1-&gt;Draw();</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;   pad2-&gt;Draw();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;   <span class="comment">//fill pad1 with the projections</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;   pad1-&gt;cd();</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;   </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;   <span class="comment">//projection of the final histogram</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;   <span class="keyword">auto</span> h_MC= hist_MC-&gt;ProjectionX(<span class="stringliteral">&quot;MC&quot;</span>);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;   <span class="keyword">auto</span> h_datas= hist_datas-&gt;ProjectionX(<span class="stringliteral">&quot;datas&quot;</span>);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;   <span class="comment">//graphical set</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;   h_MC-&gt;SetStats(0); </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;   h_datas-&gt;SetStats(0);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;   h_MC-&gt;SetLineColor(2);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTitle(<span class="stringliteral">&quot;m_{#mu#mu} (GeV)&quot;</span>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTitle(<span class="stringliteral">&quot;Afb&quot;</span>);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;   h_MC-&gt;GetXaxis()-&gt;CenterTitle(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;   h_MC-&gt;GetYaxis()-&gt;CenterTitle(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTitleSize(0.13);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetNdivisions(505);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetLabelFont(42);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetLabelSize(0.11);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetLabelOffset(-0.055);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTitleOffset(0.34);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;   h_MC-&gt;GetXaxis()-&gt;SetTickLength(0.05);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetRangeUser(-1.2, 1.2);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetLabelSize(0.09);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTitleSize(0.13);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetLabelOffset(0.01);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTitleOffset(0.6);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;   h_MC-&gt;GetYaxis()-&gt;SetTickLength(0.05);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;   </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;   h_datas-&gt;SetMarkerColor(1); </div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;   h_datas-&gt;SetLineColor(1); </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;   h_datas-&gt;SetMarkerStyle(8); </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;   <span class="comment">//drawing the final histogram</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;   h_MC-&gt;DrawClone(<span class="stringliteral">&quot;HIST SAME&quot;</span>);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;   h_datas-&gt;DrawClone(<span class="stringliteral">&quot;P SAME&quot;</span>);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;   <span class="comment">//legend only on the first pad</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;   <span class="keywordflow">if</span> (filenumber == 1){</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      <span class="keyword">auto</span> legend = <span class="keyword">new</span> TLegend(0.3,0.3,0.5,0.45);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      legend-&gt;AddEntry(h_MC,<span class="stringliteral">&quot;MC&quot;</span>,<span class="stringliteral">&quot;l&quot;</span>);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;      legend-&gt;AddEntry(h_datas,<span class="stringliteral">&quot;Datas&quot;</span>,<span class="stringliteral">&quot;lep&quot;</span>);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      legend-&gt;SetBorderSize(0);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      legend-&gt;SetFillColor(0);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      legend-&gt;SetTextSize(0.13);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      legend-&gt;Draw();</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;   }</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;   <span class="comment">//label on the histogram</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;   TLatex label;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;   label.SetTextSize(0.11);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;   label.SetTextAlign(12);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;   label.SetNDC(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;   label.DrawLatex(0.3, 0.2, rapiditylim.c_str());</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;   <span class="comment">//residual pad</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;   pad2-&gt;cd();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;   pad2-&gt;SetGridy();</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;   </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;   <span class="comment">//creating histo Data-MC</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;   h_datas-&gt;Add(h_MC,-1.);</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;   <span class="comment">//setting histogram properties</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;   h_datas-&gt;SetStats(0);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;   </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;   h_datas-&gt;GetXaxis()-&gt;SetTitle(<span class="stringliteral">&quot;m_{#mu#mu} (GeV)&quot;</span>);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;   h_datas-&gt;GetXaxis()-&gt;SetLabelSize(0.10);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;   h_datas-&gt;GetXaxis()-&gt;SetNdivisions(505);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;   h_datas-&gt;GetXaxis()-&gt;SetTitleSize(0.11);</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;   h_datas-&gt;GetXaxis()-&gt;SetTitleOffset(0.86);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;   </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;   h_datas-&gt;GetYaxis()-&gt;SetTitle(<span class="stringliteral">&quot;Data-MC&quot;</span>);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;   h_datas-&gt;GetYaxis()-&gt;SetLabelSize(0.08);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;   h_datas-&gt;GetYaxis()-&gt;SetNdivisions(505);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;   h_datas-&gt;GetYaxis()-&gt;SetTitleOffset(0.6);</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;   h_datas-&gt;GetYaxis()-&gt;SetTitleSize(0.12);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;   h_datas-&gt;DrawClone(<span class="stringliteral">&quot;PESAME&quot;</span>);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;}</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GRAPHICAL_UTILITIES_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="agraphical__utilities_8h_html_a07716b57818dbe5ff9b5bae853be6963"><div class="ttname"><a href="graphical__utilities_8h.html#a07716b57818dbe5ff9b5bae853be6963">dmmasshisto</a></div><div class="ttdeci">void dmmasshisto(ROOT::RDF::RInterface&lt; ROOT::Detail::RDF::RJittedFilter, void &gt; df_MC, ROOT::RDF::RInterface&lt; ROOT::Detail::RDF::RJittedFilter, void &gt; df_datas, string filename, string rapiditylim, string canvasname)</div><div class="ttdef"><b>Definition:</b> graphical_utilities.h:184</div></div>
 <div class="ttc" id="agraphical__utilities_8h_html_a15195e6daf9addf3ac419878684ba047"><div class="ttname"><a href="graphical__utilities_8h.html#a15195e6daf9addf3ac419878684ba047">coshisto</a></div><div class="ttdeci">void coshisto(ROOT::RDF::RInterface&lt; ROOT::Detail::RDF::RJittedFilter, void &gt; df_MC, ROOT::RDF::RInterface&lt; ROOT::Detail::RDF::RJittedFilter, void &gt; df_datas, string filename, string rapiditylim, float x1, float y1, float x2, float y2, string canvasname)</div><div class="ttdef"><b>Definition:</b> graphical_utilities.h:76</div></div>
+<div class="ttc" id="agraphical__utilities_8h_html_a402ad752672030c62dd862061c67a8a0"><div class="ttname"><a href="graphical__utilities_8h.html#a402ad752672030c62dd862061c67a8a0">afbhist</a></div><div class="ttdeci">void afbhist(ROOT::RDF::RInterface&lt; ROOT::Detail::RDF::RJittedFilter, void &gt; df_MC, ROOT::RDF::RInterface&lt; ROOT::Detail::RDF::RJittedFilter, void &gt; df_datas, int filenumber, string rapiditylim)</div><div class="ttdef"><b>Definition:</b> graphical_utilities.h:315</div></div>
 <div class="ttc" id="agraphical__utilities_8h_html_a7681d891e25dbae1760d1f14e531aee9"><div class="ttname"><a href="graphical__utilities_8h.html#a7681d891e25dbae1760d1f14e531aee9">operationhist</a></div><div class="ttdeci">auto operationhist(ROOT::RDF::RResultPtr&lt;::TH2D &gt; &amp;histNf, ROOT::RDF::RResultPtr&lt;::TH2D &gt; &amp;histDf, ROOT::RDF::RResultPtr&lt;::TH2D &gt; &amp;histNb, ROOT::RDF::RResultPtr&lt;::TH2D &gt; &amp;histDb)</div><div class="ttdef"><b>Definition:</b> graphical_utilities.h:292</div></div>
-<div class="ttc" id="agraphical__utilities_8h_html_ac52e7e5d10318312fb41cfea233501b6"><div class="ttname"><a href="graphical__utilities_8h.html#ac52e7e5d10318312fb41cfea233501b6">afbhist</a></div><div class="ttdeci">void afbhist(ROOT::RDF::RInterface&lt; ROOT::Detail::RDF::RJittedFilter, void &gt; df_MC, string filename, string rapiditylim)</div><div class="ttdef"><b>Definition:</b> graphical_utilities.h:315</div></div>
 <div class="ttc" id="agraphical__utilities_8h_html_af49ad1827056366916483538e9583c48"><div class="ttname"><a href="graphical__utilities_8h.html#af49ad1827056366916483538e9583c48">save_histogram</a></div><div class="ttdeci">void save_histogram(TCanvas *c, string namehist, string type)</div><div class="ttdef"><b>Definition:</b> graphical_utilities.h:27</div></div>
+<div class="ttc" id="anamespaceopenfiles_html_afec62190323f37ac6594dbfd6c6a8561"><div class="ttname"><a href="namespaceopenfiles.html#afec62190323f37ac6594dbfd6c6a8561">openfiles.type</a></div><div class="ttdeci">type</div><div class="ttdef"><b>Definition:</b> openfiles.py:63</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

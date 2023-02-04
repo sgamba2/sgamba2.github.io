@@ -113,34 +113,32 @@ Requirements</h1>
 </ul>
 <h1><a class="anchor" id="example_usage"></a>
 An example of usage</h1>
-<p>The whole project is done in C++ files, but the compilation is done with python. This is simply done by typing in the terminal, in the main "cmepdaexam" folder: </p><div class="fragment"><div class="line">$ python3 <a class="code" href="namespaceopenfiles.html">openfiles</a>.py</div>
+<p>The whole project is done in C++ files, but the compilation is done with python. You can type in the terminal, in the main "cmepdaexam" folder: </p><div class="fragment"><div class="line">$ python3 <a class="code" href="namespaceopenfiles.html">openfiles</a>.py --<a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a></div>
 <div class="ttc" id="anamespaceopenfiles_html"><div class="ttname"><a href="namespaceopenfiles.html">openfiles</a></div><div class="ttdef"><b>Definition:</b> openfiles.py:1</div></div>
-</div><!-- fragment --><p>Be careful: in order to make your analysis working you have to be in the main folder "cmepdaexam".</p>
-<p>The program will ask you if you want to filter your datas or not.</p>
-<p>If you type 'y', you have to insert your root path to the file for MC and Run, and also the path where you want to save your filtered dataframes.</p>
-<ul>
-<li>We used root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/MonteCarlo11_Summer11LegDR_DYJetsToLL_M-50_7TeV-madgraph-pythia6-tauola_merged.root for the MC simulation datas.</li>
-<li>We used root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2012C_DoubleMuParked_merged.root for the Run datas.</li>
-</ul>
-<p>This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your MC path:</div>
+<div class="ttc" id="anamespaceopenfiles_html_aa3a1449415f7732673cb176f56feb3a8"><div class="ttname"><a href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">openfiles.help</a></div><div class="ttdeci">help</div><div class="ttdef"><b>Definition:</b> openfiles.py:63</div></div>
+</div><!-- fragment --><p>You can have some options: </p><div class="fragment"><div class="line">$ options:</div>
+<div class="line">$ -h, --<a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a>            show <span class="keyword">this</span> <a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a> message and exit</div>
+<div class="line">$ --filter FILTER       Do you want to filter your datas? [y/n]</div>
+<div class="line">$ --filterMC FILTERMC   If filter is y: Choose the path of your MC dataframe  </div>
+<div class="line">$ --filterRUN FILTERRUN If filter is y: Choose the path of your RUN dataframe </div>
+<div class="line">$ --MCfile MCFILE       Choose the name of your filtered MC dataframe in datas (add .root extension)</div>
+<div class="line">$ --RUNfile RUNFILE     Choose the name of your filtered RUN dataframe in datas (add .root extension)</div>
+<div class="line">$ --analysis ANALYSIS   Which analysis <span class="keywordflow">do</span> you want to <span class="keywordflow">do</span>? 0: no analysis, cos: costheta histograms, dimspec: Dimuon spectrum of Z, <a class="code" href="afb_8h.html#adc95d5ff14fd951b70e41a91496b7374">afb</a>: Asimmetry forward backward</div>
+<div class="ttc" id="aafb_8h_html_adc95d5ff14fd951b70e41a91496b7374"><div class="ttname"><a href="afb_8h.html#adc95d5ff14fd951b70e41a91496b7374">afb</a></div><div class="ttdeci">void afb(std::string filepath_MC, std::string filepath_datas)</div><div class="ttdoc">Creating afb histogram in function of dimuon mass. Firstly checks if in the dataframes exist and if t...</div></div>
+</div><!-- fragment --><p>You have to choose (the filter option is mandatory) if you want to filter your datas or not. In the first case: </p><div class="fragment"><div class="line">$--filter y</div>
+</div><!-- fragment --><p> In this case you have to write also: </p><div class="fragment"><div class="line">$--filterMC fileMC --filterRUN fileRUN --MCfile Events_MC.root --RUNfile Events_datas.root</div>
+</div><!-- fragment --><p> For example we chose file from <a href="https://eospublichttp01.cern.ch/eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/">here</a>: </p><div class="fragment"><div class="line">$ Insert your MC path:</div>
 <div class="line">$ root:<span class="comment">//eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/MonteCarlo11_Summer11LegDR_DYJetsToLL_M-50_7TeV-madgraph-pythia6-tauola_merged.root</span></div>
 <div class="line">$ Insert your Run path:</div>
 <div class="line">$ root:<span class="comment">//eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2012C_DoubleMuParked_merged.root</span></div>
-</div><!-- fragment --><p> The program will accept only files that exist and that have the right columns, if there aren't the program will stop. Then the program will ask you the name of your filtered dataframes files.</p>
-<p>This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert where you want to save your filtered MC name (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_MC.root</div>
-<div class="line">$ Insert where you want to save your filtered Run name (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_datas.root</div>
-</div><!-- fragment --><p> You'll find your files on the directory "datas".</p>
-<p>If you type 'n', you will have to insert the path of your filtered file. It only accepts root files, with the right columns. This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC path (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_MC.root</div>
-<div class="line">$ Insert your filtered Run path (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_datas.root</div>
-</div><!-- fragment --><p> Be careful, the program will only look for files that are in the "datas" directory, if there aren't the program will stop.</p>
-<p>You will be able to choose the Analysis you want:</p><ul>
-<li>1: the measurement of the angle of the negative muon in the Collins–Soper frame of the dimuon system;</li>
-<li>2: the measurement of the Z resonance;</li>
-<li>3: the measurement of the forward-backward asymmetry;</li>
+</div><!-- fragment --><p> The program will accept only files that exist and that have the right columns, if there aren't the program will stop. Then you have to choose the name of your filtered dataframes files. Be careful: you have to put the .root extension to your filtered files or you won't be able to use them. In this case you have to choose only file name already filtered: </p><div class="fragment"><div class="line">$--MCfile Events_MC.root --RUNfile Events_datas.root</div>
+</div><!-- fragment --><p> If you have already used the filter function for one of the analysis and you don't want to repeat it, you can choose to not filter your datas: </p><div class="fragment"><div class="line">$ --filter n</div>
+</div><!-- fragment --><p> Then you have to choose the name of your filtered dataframes files. Be careful: you have to put the .root extension to your filtered files or you won't be able to use them. In this case you have to choose only file name already filtered: </p><div class="fragment"><div class="line">$--MCfile Events_MC.root --RUNfile Events_datas.root</div>
+</div><!-- fragment --><p> Then you have to insert which analysis you want to do, with this option: </p><div class="fragment"><div class="line">$ --analysis </div>
+</div><!-- fragment --><p>You can choose between:</p><ul>
+<li>cos: the measurement of the angle of the negative muon in the Collins–Soper frame of the dimuon system;</li>
+<li>dimspec: the measurement of the Z resonance;</li>
+<li>afb: the measurement of the forward-backward asymmetry;</li>
 <li>0: quit.</li>
 </ul>
 <p>After the analysis the program will stop. If your analysis well ended, you can find your plots on the directory "images".</p>
@@ -215,30 +213,46 @@ Afb</h2>
 Histogram of the asymmetry forward backward with six different ranges of rapidity.</div></div>
 <h1><a class="anchor" id="tests"></a>
 Testing</h1>
-<p>This is simply done by typing in the terminal: </p><div class="fragment"><div class="line">$ python3 <a class="code" href="namespacetesting.html">testing</a>.py</div>
+<p>We have done tests in C++, but the compilation is done with python. You can type in the terminal, in the main "cmepdaexam" folder: </p><div class="fragment"><div class="line">$ python3 <a class="code" href="namespacetesting.html">testing</a>.py --<a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a></div>
 <div class="ttc" id="anamespacetesting_html"><div class="ttname"><a href="namespacetesting.html">testing</a></div><div class="ttdef"><b>Definition:</b> testing.py:1</div></div>
-</div><!-- fragment --><p>Be careful: in order to make your analysis working you have to be in the main folder "cmepdaexam".</p>
-<p>The program will ask you if you want to filter your datas or not.</p>
-<p>If you type 'y', you have to insert your root path to the file for MC and Run, and also the path where you want to save your filtered dataframes.</p>
-<ul>
-<li>We used root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/MonteCarlo11_Summer11LegDR_DYJetsToLL_M-50_7TeV-madgraph-pythia6-tauola_merged.root for the MC simulation datas.</li>
-<li>We used root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2012C_DoubleMuParked_merged.root for the Run datas. The program will accept only files that exist and that have the right columns, if there aren't the program will stop. Then the program will ask you the name of filtered dataframes files.</li>
-</ul>
-<p>This is simply done (this is an example) by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC name (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_MC.root</div>
-<div class="line">$ Insert your filtered Run name (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_datas.root</div>
-</div><!-- fragment --><p> This files will be saved in "datas" directory.</p>
-<p>If you type 'n', you will have to insert the path of your filtered file. This is simply done by typing in the terminal: </p><div class="fragment"><div class="line">$ Insert your filtered MC name (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_MC.root</div>
-<div class="line">$ Insert your filtered Run name (Be careful, put file extension .root too):</div>
-<div class="line">$ Events_datas.root</div>
-</div><!-- fragment --><p> The program will automatically look for your files in the "datas" directory, if there aren't the program will stop. For semplicity you'll have to write your datas and MC names also if you want to do test1 (filter function test). You will be able to choose the test you want to do:</p><ul>
+</div><!-- fragment --><p>You can have some options: </p><div class="fragment"><div class="line">$ options:</div>
+<div class="line">$ -h, --<a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a>            show <span class="keyword">this</span> <a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a> message and exit</div>
+<div class="line">$ --filter FILTER       Do you want to filter your datas? [y/n]</div>
+<div class="line">$ --filterMC FILTERMC   If filter is y: Choose the path of your MC dataframe  </div>
+<div class="line">$ --filterRUN FILTERRUN If filter is y: Choose the path of your RUN dataframe </div>
+<div class="line">$ --MCfile MCFILE       Choose the name of your filtered MC dataframe in datas (add .root extension)</div>
+<div class="line">$ --RUNfile RUNFILE     Choose the name of your filtered RUN dataframe in datas (add .root extension)</div>
+<div class="line">$ --testopt TESTOPT     Which test <span class="keywordflow">do</span> you want to <span class="keywordflow">do</span>? 0: no test, 1: test on</div>
+<div class="line">$                       filter <span class="keyword">function</span> (no files needed), 2: costheta test</div>
+<div class="line">$                       (files needed), 3: test on energy (files needed), 4:</div>
+<div class="line">$                       test on energy formulas (files needed), 5: test on</div>
+<div class="line">$                       operation_hist (no files needed)</div>
+</div><!-- fragment --><p>You have to choose (the filter option is mandatory only for tests 2, 3, 4) if you want to filter your datas or not. In the first case: </p><div class="fragment"><div class="line">$--filter y</div>
+</div><!-- fragment --><p> In this case you have to write also: </p><div class="fragment"><div class="line">$--filterMC fileMC --filterRUN fileRUN --MCfile Events_MC.root --RUNfile Events_datas.root</div>
+</div><!-- fragment --><p> For example we chose file from <a href="https://eospublichttp01.cern.ch/eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/">here</a>: </p><div class="fragment"><div class="line">$ Insert your MC path:</div>
+<div class="line">$ root:<span class="comment">//eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/MonteCarlo11_Summer11LegDR_DYJetsToLL_M-50_7TeV-madgraph-pythia6-tauola_merged.root</span></div>
+<div class="line">$ Insert your Run path:</div>
+<div class="line">$ root:<span class="comment">//eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2012C_DoubleMuParked_merged.root</span></div>
+</div><!-- fragment --><p> The program will accept only files that exist and that have the right columns, if there aren't the program will stop. Then you have to choose the name of your filtered dataframes files. Be careful: you have to put the .root extension to your filtered files or you won't be able to use them. In this case you have to choose only file name already filtered: </p><div class="fragment"><div class="line">$--MCfile Events_MC.root --RUNfile Events_datas.root</div>
+</div><!-- fragment --><p> If you have already used the filter function for one of the analysis and you don't want to repeat it, you can choose to not filter your datas: </p><div class="fragment"><div class="line">$ --filter n</div>
+</div><!-- fragment --><p> Then you have to choose the name of your filtered dataframes files. Be careful: you have to put the .root extension to your filtered files or you won't be able to use them. In this case you have to choose only file name already filtered: </p><div class="fragment"><div class="line">$--MCfile Events_MC.root --RUNfile Events_datas.root</div>
+</div><!-- fragment --><p> Then you have to insert which test you want to do, with this option: </p><div class="fragment"><div class="line">$ --testopt </div>
+</div><!-- fragment --><p> If you want to do test 5 or 1 it is not necessary to write the filter option. You can only put the testopt.</p>
+<p>You will be able to choose the test you want to do:</p><ul>
 <li>1: test on filter function;</li>
 <li>2: test on costheta value;</li>
 <li>3: test on energy value;</li>
 <li>4: test on energy formula value;</li>
+<li>5: test on operation histograms;</li>
 <li>0: quit.</li>
+</ul>
+<p>After a test your program will stop. If the test well ended there will be written "Test passed!". The default applied filters are on the following columns of the dataframes:</p><ul>
+<li>nMuon;</li>
+<li>Muon_charge;</li>
+<li>Muon_eta;</li>
+<li>Muon_pt;</li>
+<li>Muon_dxy;</li>
+<li>Muon_pfRelIso03_chg.</li>
 </ul>
 <h2><a class="anchor" id="test1"></a>
 Test on filter function</h2>
@@ -246,12 +260,15 @@ Test on filter function</h2>
 <h2><a class="anchor" id="test2"></a>
 Test on costheta value</h2>
 <p>Test on costheta function handles if \(|cos(\theta^*)|\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is &lt;1. It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|cos(\theta^*)|&gt;1\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__cos_8cpp.html" title="Testing if the |cos(theta*)|&lt;1.">test_cos.cpp</a></code>.</p>
-<h2><a class="anchor" id="test2"></a>
-Test on costheta value</h2>
-<p>Test on energy values function handles if \(E_1+E_2-E_{tot}\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_{tot}\). It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|E_1+E_2-E_{tot}|&gt;0.01\)% \(E_{tot}\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy_8cpp.html" title="Testing if the sum of E1 and E2 is almost equal to Etot.">test_energy.cpp</a></code>.</p>
 <h2><a class="anchor" id="test3"></a>
+Test on energy value</h2>
+<p>Test on energy values function handles if \(E_1+E_2-E_{tot}\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_{tot}\). It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|E_1+E_2-E_{tot}|&gt;0.01\)% \(E_{tot}\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy_8cpp.html" title="Testing if the sum of E1 and E2 is almost equal to Etot.">test_energy.cpp</a></code>.</p>
+<h2><a class="anchor" id="test4"></a>
 Test on energy value formulas</h2>
-<p>Test on energy values function handles if \(E_i^2=p_i^2+m^2\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_i\). It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|E_i-(p_i^2+m^2)|&gt;0.01\)% \(E_i\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy__formulas_8cpp.html" title="Testing if E_i^2=m^2+p_i^2.">test_energy_formulas.cpp</a></code>. </p>
+<p>Test on energy values function handles if \(E_i^2=p_i^2+m^2\), defined in <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code>, is less or higher than 0.01% of \(E_i\). It creates all quantities in <code><a class="el" href="utilities_8h.html#abb150d2690091058f8d3ae6578463906">allquantities()</a></code> and we check how many rows left with \(|E_i-(p_i^2+m^2)|&gt;0.01\)% \(E_i\). It prints "Test passed!" if there are no rows left or "Test failed!". A more detail description of the functions used it can be found in <code><a class="el" href="test__energy__formulas_8cpp.html" title="Testing if E_i^2=m^2+p_i^2.">test_energy_formulas.cpp</a></code>.</p>
+<h2><a class="anchor" id="test5"></a>
+Test on operation histograms</h2>
+<p>Test on <code><a class="el" href="graphical__utilities_8h.html#a7681d891e25dbae1760d1f14e531aee9">operationhist()</a></code> function handles if the operations done on 4 different histograms have the correct result. It creates four histograms and then four random variables. We have inserted the variables in four different bins of the four histograms, rearranged to create new variables. Then we have test if the difference between the content of each bin and the variable calculated ( \(var_{calc}\)) as we expect is &lt; 0.1% \(var_{calc}\). Then the program checks if the content of each bin and the variable calculated are concord. It prints "Test passed!" if the statements are true or "Test failed!" if not. A more detail description of the functions used it can be found in <code><a class="el" href="test__operationhist_8cpp.html" title="Testing if the the content of bins are almost equal to the calculated value after operation on histog...">test_operationhist.cpp</a></code>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

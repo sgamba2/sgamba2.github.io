@@ -1,21 +1,19 @@
 var namespaces_dup =
 [
     [ "openfiles", "namespaceopenfiles.html", [
-      [ "analysis", "namespaceopenfiles.html#a4e601b53f64f05eede2fea178b05ee7e", null ],
-      [ "choice", "namespaceopenfiles.html#a73d1b696356309f45424bb9b4cbff3f2", null ],
-      [ "fil", "namespaceopenfiles.html#a87d5af4c402ca3cb151db3a461bb5481", null ],
-      [ "filename_datas_fil", "namespaceopenfiles.html#aedb206f11132e0d243d46696cd2c5b56", null ],
-      [ "filename_MC_fil", "namespaceopenfiles.html#a38dd15e5fd1b1e00bd067c9c1b0a0f89", null ],
-      [ "filepath_datas", "namespaceopenfiles.html#acef20ac21a0b9001fc254dbc4060c78c", null ],
-      [ "filepath_MC", "namespaceopenfiles.html#a87d0624d572938f1efb1a22566adfc1c", null ]
+      [ "process", "namespaceopenfiles.html#a401e525c2f7b61c936c7a1690da981c5", null ],
+      [ "args", "namespaceopenfiles.html#ad9eefd8a3d4d5cfcc80b3a7a78eb2feb", null ],
+      [ "help", "namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8", null ],
+      [ "parser", "namespaceopenfiles.html#a5be81c3b0089c5d37dbac89b9dcca63d", null ],
+      [ "str", "namespaceopenfiles.html#a817d528e950f2110c9a0990ac2002ad4", null ],
+      [ "type", "namespaceopenfiles.html#afec62190323f37ac6594dbfd6c6a8561", null ]
     ] ],
     [ "testing", "namespacetesting.html", [
-      [ "choice", "namespacetesting.html#a8ecd6a1ec326d816262fc904f3413245", null ],
-      [ "fil", "namespacetesting.html#a82ef2517965f341ef23335cc783dbc62", null ],
-      [ "filename_datas_fil", "namespacetesting.html#ab4c983166e7a0246a401a97b238f707e", null ],
-      [ "filename_MC_fil", "namespacetesting.html#a548220428ce6a715138125d7fa61c197", null ],
-      [ "filepath_datas", "namespacetesting.html#abf0165e40096fac3fa89b2d5af9ad276", null ],
-      [ "filepath_MC", "namespacetesting.html#a086a557397f0a26dc6e994aa295721ed", null ],
-      [ "testopt", "namespacetesting.html#ac0b7ad1a9b9697bb5e5ba511022348ab", null ]
+      [ "process", "namespacetesting.html#a54e16f4fa338034a0a32199e54cb61d3", null ],
+      [ "args", "namespacetesting.html#a80124978ea8ffcb828922c92f72477a0", null ],
+      [ "help", "namespacetesting.html#ac5f9957fbe12f4a926393cda5f8f5502", null ],
+      [ "parser", "namespacetesting.html#a7f0d4de71725abe59ededf3cd4d5d822", null ],
+      [ "str", "namespacetesting.html#a9916229a6dad55c1c2cb070a4091fe90", null ],
+      [ "type", "namespacetesting.html#ab217838640ba1f67e5f24d4240179394", null ]
     ] ]
 ];

@@ -38,13 +38,16 @@ var NAVTREE =
       [ "Testing", "index.html#tests", [
         [ "Test on filter function", "index.html#test1", null ],
         [ "Test on costheta value", "index.html#test2", null ],
-        [ "Test on energy value formulas", "index.html#test3", null ]
+        [ "Test on energy value", "index.html#test3", null ],
+        [ "Test on energy value formulas", "index.html#test4", null ],
+        [ "Test on operation histograms", "index.html#test5", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],

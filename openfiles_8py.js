@@ -1,10 +1,9 @@
 var openfiles_8py =
 [
-    [ "analysis", "openfiles_8py.html#a4e601b53f64f05eede2fea178b05ee7e", null ],
-    [ "choice", "openfiles_8py.html#a73d1b696356309f45424bb9b4cbff3f2", null ],
-    [ "fil", "openfiles_8py.html#a87d5af4c402ca3cb151db3a461bb5481", null ],
-    [ "filename_datas_fil", "openfiles_8py.html#aedb206f11132e0d243d46696cd2c5b56", null ],
-    [ "filename_MC_fil", "openfiles_8py.html#a38dd15e5fd1b1e00bd067c9c1b0a0f89", null ],
-    [ "filepath_datas", "openfiles_8py.html#acef20ac21a0b9001fc254dbc4060c78c", null ],
-    [ "filepath_MC", "openfiles_8py.html#a87d0624d572938f1efb1a22566adfc1c", null ]
+    [ "process", "openfiles_8py.html#a401e525c2f7b61c936c7a1690da981c5", null ],
+    [ "args", "openfiles_8py.html#ad9eefd8a3d4d5cfcc80b3a7a78eb2feb", null ],
+    [ "help", "openfiles_8py.html#aa3a1449415f7732673cb176f56feb3a8", null ],
+    [ "parser", "openfiles_8py.html#a5be81c3b0089c5d37dbac89b9dcca63d", null ],
+    [ "str", "openfiles_8py.html#a817d528e950f2110c9a0990ac2002ad4", null ],
+    [ "type", "openfiles_8py.html#afec62190323f37ac6594dbfd6c6a8561", null ]
 ];
