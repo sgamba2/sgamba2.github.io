@@ -144,13 +144,13 @@ Include dependency graph for afb.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aea07f21fdde87d23cb5d8f19aa26a50c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="afb_8h.html#aea07f21fdde87d23cb5d8f19aa26a50c">afb</a> (std::string filepath_MC)</td></tr>
-<tr class="memdesc:aea07f21fdde87d23cb5d8f19aa26a50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating afb histogram in function of dimuon mass. Firstly checks if in the dataframe exists and if there are the right columns, then creates all quantities necessary to the analysis, then makes six filters for the rapidity conditions and creates six histograms in one canvas, saving them in .pdf and .png.  <a href="afb_8h.html#aea07f21fdde87d23cb5d8f19aa26a50c">More...</a><br /></td></tr>
-<tr class="separator:aea07f21fdde87d23cb5d8f19aa26a50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc95d5ff14fd951b70e41a91496b7374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="afb_8h.html#adc95d5ff14fd951b70e41a91496b7374">afb</a> (std::string filepath_MC, std::string filepath_datas)</td></tr>
+<tr class="memdesc:adc95d5ff14fd951b70e41a91496b7374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating afb histogram in function of dimuon mass. Firstly checks if in the dataframes exist and if there are the right columns, then creates all quantities necessary to the analysis, then makes six filters for the rapidity conditions and creates six histograms in one canvas, saving them in .pdf and .png.  <a href="afb_8h.html#adc95d5ff14fd951b70e41a91496b7374">More...</a><br /></td></tr>
+<tr class="separator:adc95d5ff14fd951b70e41a91496b7374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aea07f21fdde87d23cb5d8f19aa26a50c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea07f21fdde87d23cb5d8f19aa26a50c">&#9670;&nbsp;</a></span>afb()</h2>
+<a id="adc95d5ff14fd951b70e41a91496b7374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc95d5ff14fd951b70e41a91496b7374">&#9670;&nbsp;</a></span>afb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,16 +159,27 @@ Functions</h2></td></tr>
           <td class="memname">void afb </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>filepath_MC</em></td><td>)</td>
+          <td class="paramname"><em>filepath_MC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filepath_datas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creating afb histogram in function of dimuon mass. Firstly checks if in the dataframe exists and if there are the right columns, then creates all quantities necessary to the analysis, then makes six filters for the rapidity conditions and creates six histograms in one canvas, saving them in .pdf and .png. </p>
+<p>Creating afb histogram in function of dimuon mass. Firstly checks if in the dataframes exist and if there are the right columns, then creates all quantities necessary to the analysis, then makes six filters for the rapidity conditions and creates six histograms in one canvas, saving them in .pdf and .png. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filepath_MC</td><td>dataframe of the MC datas</td></tr>
+    <tr><td class="paramname">filepath_MC</td><td>dataframe of the MC datas </td></tr>
+    <tr><td class="paramname">filepath_datas</td><td>dataframe of the RUN datas</td></tr>
   </table>
   </dd>
 </dl>
