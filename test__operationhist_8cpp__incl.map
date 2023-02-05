@@ -1,6 +1,6 @@
 <map id="/home/sarinaleggy/Scrivania/cmepda_exam/exam/tests/test_operationhist.cpp" name="/home/sarinaleggy/Scrivania/cmepda_exam/exam/tests/test_operationhist.cpp">
 <area shape="rect" id="node1" title="Testing if the the content of bins are almost equal to the calculated value after operation on histog..." alt="" coords="1315,5,1521,61"/>
-<area shape="rect" id="node2" href="$graphical__utilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*)" alt="" coords="964,109,1109,151"/>
+<area shape="rect" id="node2" href="$graphical__utilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots." alt="" coords="964,109,1109,151"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,199,76,225"/>
 <area shape="rect" id="node9" title=" " alt="" coords="100,199,272,225"/>
 <area shape="rect" id="node11" title=" " alt="" coords="1526,199,1649,225"/>
