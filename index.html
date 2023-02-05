@@ -115,7 +115,7 @@ Requirements</h1>
 An example of usage</h1>
 <p>The whole project is done in C++ files, but the compilation is done with python. You can type in the terminal, in the main "cmepdaexam" folder: </p><div class="fragment"><div class="line">$ python3 <a class="code" href="namespaceopenfiles.html">openfiles</a>.py --<a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a></div>
 <div class="ttc" id="anamespaceopenfiles_html"><div class="ttname"><a href="namespaceopenfiles.html">openfiles</a></div><div class="ttdef"><b>Definition:</b> openfiles.py:1</div></div>
-<div class="ttc" id="anamespaceopenfiles_html_aa3a1449415f7732673cb176f56feb3a8"><div class="ttname"><a href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">openfiles.help</a></div><div class="ttdeci">help</div><div class="ttdef"><b>Definition:</b> openfiles.py:63</div></div>
+<div class="ttc" id="anamespaceopenfiles_html_aa3a1449415f7732673cb176f56feb3a8"><div class="ttname"><a href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">openfiles.help</a></div><div class="ttdeci">help</div><div class="ttdef"><b>Definition:</b> openfiles.py:68</div></div>
 </div><!-- fragment --><p>You can have some options: </p><div class="fragment"><div class="line">$ options:</div>
 <div class="line">$ -h, --<a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a>            show <span class="keyword">this</span> <a class="code" href="namespaceopenfiles.html#aa3a1449415f7732673cb176f56feb3a8">help</a> message and exit</div>
 <div class="line">$ --filter FILTER       Do you want to filter your datas? [y/n]</div>
@@ -183,7 +183,7 @@ Dimuon mass spectrum histogram with range rapidity from 0.8 to 1.2.</div></div>
 <img src="dimuon_spectrum_Z3.png" alt=""/>
 <div class="caption">
 Dimuon mass spectrum histogram with range rapidity from 1.6 to 1.8.</div></div>
-<p>A more detail description of the functions used it can be found in <code><a class="el" href="dimuonSpectrumZ_8h.html">dimuonSpectrumZ.h</a></code>, <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code> and <code><a class="el" href="graphicalUtilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots.">graphicalUtilities.h</a></code>. </p>
+<p>A more detail description of the functions used it can be found in <code><a class="el" href="dimuonSpectrumZ_8h.html" title="Creating dimuon spectrum histogram of Z from filtered dataframe.">dimuonSpectrumZ.h</a></code>, <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code> and <code><a class="el" href="graphicalUtilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots.">graphicalUtilities.h</a></code>. </p>
 <h2><a class="anchor" id="costheta"></a>
 cos(theta*)</h2>
 <p>This macro will do the normalized histograms of the angle of the negative muon in the Collins–Soper frame of the dimuon system. First it will be created three columns of the dimuon four vector, first muon four vector and second muon four vector, passing the four column we have saved to the function in <b><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></b>. Then we will calculate the dimuon invariant mass and othe quantities foundamental to calculate \(cos(\theta^*)\). We have also calculated the rapidity in order to plot three different plots with different costraints of rapidity. The MC datas will be plotted in yellow and the Run datas will be plotted as black points. We normalized the histograms with the total number of the events of MC and Run datas.</p>
@@ -200,12 +200,12 @@ Histogram of the angle of the negative muon in the Collins–Soper frame of the 
 <img src="costheta3.png" alt=""/>
 <div class="caption">
 Histogram of the angle of the negative muon in the Collins–Soper frame of the dimuon systemm with range rapidity from 1.6 to 1.8.</div></div>
-<p>A more detail description of the functions used it can be found in <code><a class="el" href="costheta_8h.html">costheta.h</a></code> , <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code> and <code><a class="el" href="graphicalUtilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots.">graphicalUtilities.h</a></code>. </p>
+<p>A more detail description of the functions used it can be found in <code><a class="el" href="costheta_8h.html" title="Creating costheta histogram from filtered dataframe.">costheta.h</a></code> , <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code> and <code><a class="el" href="graphicalUtilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots.">graphicalUtilities.h</a></code>. </p>
 <h2><a class="anchor" id="afb"></a>
 Afb</h2>
 <p>This macro will do the 2D histogram of Afb in function of dimuon mass only of MC events. First it will be created three columns of the dimuon four vector, first muon four vector and second muon four vector, passing the four column we have saved to the function in <b><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></b>. Then we will calculate the dimuon invariant mass and othe quantities foundamental to calculate \(cos(\theta^*)\), \(wd\) and \(wn\) (variables you can find in the <a href="https://arxiv.org/abs/1806.00863">article</a>). We have also calculated the rapidity in order to plot six different plots in one canvas with different costraints of rapidity. The MC datas will be plotted as black points.</p>
 <p>The canvas is saved in the directory <b>images</b> and in the subdirectory <b>afb</b> as <b>afb.pdf</b> and <b>afb.png</b>, If the directories don't exist, then the program will create them.</p>
-<p>A more detail description of the functions used it can be found in <code><a class="el" href="afb_8h.html">afb.h</a></code> , <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code> and <code><a class="el" href="graphicalUtilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots.">graphicalUtilities.h</a></code>.</p>
+<p>A more detail description of the functions used it can be found in <code><a class="el" href="afb_8h.html" title="Creating afb histogram in function of dimuon mass.">afb.h</a></code> , <code><a class="el" href="utilities_8h.html" title="Utilities to define new columns on the dataframe.">utilities.h</a></code> and <code><a class="el" href="graphicalUtilities_8h.html" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots.">graphicalUtilities.h</a></code>.</p>
 <p>We report our measurement of the asymmetry forward backward. We have drawn only th MC events. </p><div class="image">
 <img src="afb.png" alt=""/>
 <div class="caption">
@@ -221,7 +221,7 @@ Testing</h1>
 <div class="line">$ --filterRUN FILTERRUN If filter is y: Choose the path of your RUN dataframe </div>
 <div class="line">$ --MCfile MCFILE       Choose the name of your filtered MC dataframe in datas (add .root extension)</div>
 <div class="line">$ --RUNfile RUNFILE     Choose the name of your filtered RUN dataframe in datas (add .root extension)</div>
-<div class="line">$ --testopt TESTOPT     Which test <span class="keywordflow">do</span> you want to <span class="keywordflow">do</span>? 0: no test, 1: test on</div>
+<div class="line">$ --testopt TESTOPT     Which test <span class="keywordflow">do</span> you want to <span class="keywordflow">do</span>? 1: test on</div>
 <div class="line">$                       filter <span class="keyword">function</span> (no files needed), 2: <a class="code" href="costheta_8h.html#a3962589f7e8bff0f91ce6c366be0bd13">costheta</a> test</div>
 <div class="line">$                       (files needed), 3: test on energy (files needed), 4:</div>
 <div class="line">$                       test on energy formulas (files needed), 5: test on</div>
@@ -240,8 +240,7 @@ Testing</h1>
 <li>2: test on costheta value;</li>
 <li>3: test on energy value;</li>
 <li>4: test on energy formula value;</li>
-<li>5: test on operation histograms;</li>
-<li>0: quit.</li>
+<li>5: test on operation histograms.</li>
 </ul>
 <p>After a test your program will stop. If the test well ended there will be written "Test passed!". The default applied filters are on the following columns of the dataframes:</p><ul>
 <li>nMuon;</li>
