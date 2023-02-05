@@ -1,0 +1,7 @@
+<map id="/home/sarinaleggy/Scrivania/cmepda_exam/exam/include/graphicalUtilities.h" name="/home/sarinaleggy/Scrivania/cmepda_exam/exam/include/graphicalUtilities.h">
+<area shape="rect" id="node1" title="Graphical utilities for displaying histograms of Afb, Z spectrum, cos(theta*) and saving the plots." alt="" coords="399,5,614,61"/>
+<area shape="rect" id="node2" href="$afb_8h.html" title=" " alt="" coords="5,117,256,158"/>
+<area shape="rect" id="node3" href="$costheta_8h.html" title=" " alt="" coords="281,109,495,165"/>
+<area shape="rect" id="node4" href="$dimuonSpectrumZ_8h.html" title=" " alt="" coords="519,109,734,165"/>
+<area shape="rect" id="node5" href="$testOperationHist_8cpp.html" title="Testing if the the content of bins are almost equal to the calculated value after operation on histog..." alt="" coords="758,109,965,165"/>
+</map>
